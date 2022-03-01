@@ -1,0 +1,26 @@
+anonymous functions ->
+
+( 	function (){
+    	alert("hello");
+	}
+) 	
+
+();                              javascript: ( function() {//code} )  (); ->in non-empty tab to run
+
+_____________________________________________________
+bookmarklets : 
+
+javascript: (() => {
+  alert("hello world !!"); -> (this works on non-empty tab) this will alert "hello world!!", when copied in address bar & hit enter.
+})();
+
+OR , in non-empty tab , use -> javascript: alert("hello world !!");
+_______________________________________________________________________
+
+href="javascript: ( function() {alert('hello');} ) ();"  -> as link source
+
+"matches": ["*://github*"] -> working on all the sites which contains "github" in their address.
+
+different sites can have their different specific content-scripts.
+
+-----------------------start from lecture 3 , 16:22 -----------------------
