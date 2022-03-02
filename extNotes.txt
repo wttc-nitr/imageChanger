@@ -25,3 +25,4 @@ different sites can have their different specific content-scripts.
 
 ----------------------- -----------------------
 background scripts -> runs in the background , starts running chrome starts
+"browser_action": {} -> need to add this in manifest.json file to use chrome.browserAction
