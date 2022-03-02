@@ -31,3 +31,17 @@ chrome.browserAction.onClicked.addListener(buttonClicked);   -> gives informatio
 function buttonClicked(tab){
   console.log(tab);
 }
+
+function buttonClicked(tab){                       -> in background.js file, to send a message to content 
+  var msg = {
+    txt: "hello, msg received"
+  };
+  chrome.tabs.sendMessage(tab.id, msg);
+}
+
+chrome.runtime.onMessage.addListener(gotMessage);     -> in content.js, to read the message received from background
+function gotMessage(message, sender, sendResponse){  
+  // do something, like :
+  console.log(message.txt)
+}
+
