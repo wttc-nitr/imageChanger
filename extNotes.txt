@@ -23,4 +23,5 @@ href="javascript: ( function() {alert('hello');} ) ();"  -> as link source
 
 different sites can have their different specific content-scripts.
 
------------------------start from lecture 3 , 16:22 -----------------------
+----------------------- -----------------------
+background scripts -> runs in the background , starts running chrome starts
