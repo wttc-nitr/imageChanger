@@ -45,3 +45,4 @@ function gotMessage(message, sender, sendResponse){
   console.log(message.txt)
 }
 
+-----------------------rewatch coding challenge after lecture 4 -----------------
