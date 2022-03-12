@@ -5,8 +5,23 @@
 
 chrome.runtime.onMessage.addListener(gotMessage);
 function gotMessage(message, sender, sendResponse){
-  var arr = document.querySelectorAll("img");
-  for (var i=0; i < arr.length; i++){
-      arr[i].src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.g_Wi6ssBGAm8sIj819VE2AHaHz%26pid%3DApi&f=1";
+  doThis();
+}
+
+function doThis() {
+  var localImages = ["cat-g16c636668_640.jpg",
+  "cat-g80632bd7c_640.jpg",
+  "cat-img.jpg",
+  "cat-g35a7f95bc_640.jpg",
+  "cat-gee16ef1fa_640.jpg",
+  "cat-g74d3ea1ae_640.jpg",
+  "cat-gffba8edca_640.jpg"];
+
+  var allImages = document.getElementsByTagName('img');
+
+  for (var i=0; i < allImages.length; i++) {
+    var randomId = Math.floor(Math.random() * localImages.length);
+    var fileName = "images/" + localImages[randomId];
+    allImages[i].srcset = chrome.extension.getURL(fileName);
   }
 }

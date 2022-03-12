@@ -45,4 +45,7 @@ function gotMessage(message, sender, sendResponse){
   console.log(message.txt)
 }
 
------------------------rewatch coding challenge after lecture 4 -----------------
+----------------------- -----------------
+"web_accessible_resources": ['file_names'], -> if u want to load an image(for example) in the extension
+
+chrome.extension.getURL(file_path) -> converts ur local file to a accessible URL, to be used by extension
