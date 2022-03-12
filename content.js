@@ -5,8 +5,10 @@
 
 chrome.runtime.onMessage.addListener(gotMessage);
 function gotMessage(message, sender, sendResponse){
-  doThis();
+  console.log("background.js working");
 }
+
+window.setTimeout(doThis, 1000);
 
 function doThis() {
   var localImages = ["cat-g16c636668_640.jpg",
