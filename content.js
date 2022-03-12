@@ -22,15 +22,15 @@ function doThis() {
   var allImages = document.getElementsByTagName('img');
   var imgContainers = document.querySelectorAll('[style*="background-image"]');
 
-  for (var i=0; i < allImages.length; i++) {
-    var randomId = Math.floor(Math.random() * localImages.length);
-    var fileName = "images/" + localImages[randomId];
+  for (let i=0; i < allImages.length; i++) {
+    let randomId = Math.floor(Math.random() * localImages.length);
+    let fileName = "images/" + localImages[randomId];
     allImages[i].src = chrome.extension.getURL(fileName);
   }
 
-  for (var j=0; i < imgContainers.length; j++) {
-    var randomId2 = Math.floor(Math.random() * localImages.length);
-    var fileName2 = "images/" + localImages[randomId2];
-    imgContainers[j].style.backgroundImage = `url(${ fileName2 })`;
+  for (let i=0; i < imgContainers.length; i++) {
+    let randomId = Math.floor(Math.random() * localImages.length);
+    let fileName = "images/" + localImages[randomId];
+    imgContainers[i].style.backgroundImage = `url(${ fileName2 })`;
   }
 }
